@@ -3,6 +3,6 @@ This is to correct phone numbers. Some software I use does not like the followin
 
 This will correct it down to 5551234567. Doing it this way will reduce errors introduced by manually typing the numbers.
 
-I may add a function to return a phone number in a more human readable form like: (555) - 123 -  4567
+I may later add a function to return a phone number in a more human readable form like: (555) - 123 -  4567
 
 Functionality will be integrated into my call logger python program.     
