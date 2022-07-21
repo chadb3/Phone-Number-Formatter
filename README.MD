@@ -13,10 +13,10 @@
  
 After you enter the "phone number" hit enter
 ```
-Enter Phone Number: (123) - 456 - 7890
-Before: (123) - 456 - 7890
+Enter Phone Number: (555) 234-5678
+Before: (555) 234-5678
 
-After: 1234567890
+After: 5552345678
 ```
 
 Phoneword Example:
