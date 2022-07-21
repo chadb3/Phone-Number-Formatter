@@ -10,9 +10,9 @@
 ## How To Use:
  
 After you enter the "phone number" hit enter
-
+```
 Enter Phone Number: (123) - 456 - 7890
-
 Before: (123) - 456 - 7890
 
 After: 1234567890
+```
