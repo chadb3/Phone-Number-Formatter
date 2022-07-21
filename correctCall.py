@@ -12,7 +12,7 @@ def nullPhone(phoneNumberIn):
 	newPhone = re.sub(r"\D", "", phoneNumberIn)
 	# prints only the digits (0-9)
 	# in other words, anything that wasn't a digit is destroyed.
-	print("\n"+newPhone)
+	print("\nAfter: "+newPhone)
 
 # main calls the function currently called nullPhone (that removes everything that is not a digit).
 def main():
