@@ -1,3 +1,4 @@
+# needed for regex ( adding this comment as I didnt notice the date on this machine was wrong and I somehow now have commits on the 17th when this did not exist...)
 import re
 # Takes in a "Phone Number"
 def nullPhone(phoneNumberIn):
