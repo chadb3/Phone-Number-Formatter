@@ -10,7 +10,7 @@ def translatePhone(phoneNumberIn):
 	for i in range(0,len(phoneNumberIn)):
 		#print(phoneNumberIn[i],end="")
 		try:
-			retPhone.append(str(pdict[phoneNumberIn[i]]))
+			retPhone.append(str(pdict[phoneNumberIn[i].upper()]))
 		except:
 			retPhone.append(phoneNumberIn[i])
 		retPhoneStr+=retPhone[i]
