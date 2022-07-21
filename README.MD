@@ -7,6 +7,8 @@
 
  Functionality will be integrated into my call logger python program.
 
+ As of this update, it now translates phonewords by default
+
 ## How To Use:
  
 After you enter the "phone number" hit enter

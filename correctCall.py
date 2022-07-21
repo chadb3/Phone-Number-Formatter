@@ -33,12 +33,8 @@ def nullPhone(phoneNumberIn):
 
 # main calls the function currently called nullPhone (that removes everything that is not a digit).
 def main():
-	choice=input("One: Translate\tTwo: Remove Formatting\nChoice: ")
-	# nullPhone takes in an a user input as a "Phone Number".
-	if(choice.lower()=="two"):
-		nullPhone(input("Enter Phone Number: "))
-	if(choice.lower()=="one"):
-		translatePhone(input("Enter Phone Number: "))
+	# now calls translate phone by default as it calls nullPhone as part of it.
+	translatePhone(input("Enter Phone Number: "))
 	return 0
 
 if __name__ == "__main__":
