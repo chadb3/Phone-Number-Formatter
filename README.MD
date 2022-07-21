@@ -18,3 +18,11 @@ Before: (123) - 456 - 7890
 
 After: 1234567890
 ```
+
+Phoneword Example:
+```
+Enter Phone Number: (555) ADG-JMPT
+Before: (555) 234-5678
+
+After: 5552345678
+```
