@@ -1,5 +1,5 @@
 # Correct Phone Number
- This is to correct phone numbers. Some software won't accept phone numbers like: (555) 234-5678
+ This is to correct phone numbers. Some software won't accept phone numbers like: (555) 234-5678 or 555-234-5678
 
  This will correct it down to 5552345678. Doing it this way will reduce errors introduced by manually typing the numbers.
 
