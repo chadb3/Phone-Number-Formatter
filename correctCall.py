@@ -2,6 +2,8 @@
 import re
 
 def translatePhone(phoneNumberIn):
+	#stores if it the number was translated or not.
+	bool_Required_translation = False
 	#stores the updated phone number
 	retPhoneStr = ""
 	#Dictionary that holds each letter and its associated number for example pdict["A"]=2 and pdict["Z"]=9 
@@ -12,9 +14,12 @@ def translatePhone(phoneNumberIn):
 		try:
 			#If possible, it converts the letter to number.
 			retPhoneStr+=str(pdict[phoneNumberIn[i].upper()])
+			bool_Required_translation = True
 		except:
 			#otherwise it just adds it to the string.
 			retPhoneStr+=phoneNumberIn[i]
+	if(bool_Required_translation):
+		print("Required Translation: {}".format(bool_Required_translation))
 	nullPhone(retPhoneStr)
 # Takes in a "Phone Number"
 def nullPhone(phoneNumberIn):
@@ -28,12 +33,12 @@ def nullPhone(phoneNumberIn):
 	newPhone = re.sub(r"\D", "", phoneNumberIn)
 	# prints only the digits (0-9)
 	# in other words, anything that wasn't a digit is destroyed.
-	print("\nAfter: "+newPhone)
+	print("\nAfter: {}\n".format(newPhone))
 
 # main calls the function currently called nullPhone (that removes everything that is not a digit).
 def main():
 	# now calls translate phone by default as it calls nullPhone as part of it.
-	translatePhone(input("Enter Phone Number: "))
+	translatePhone(input("\nEnter Phone Number: "))
 	return 0
 
 if __name__ == "__main__":
