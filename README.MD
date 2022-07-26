@@ -5,9 +5,9 @@
 
  Using this will reduce errors that could be introduced by manually typing the numbers.
 
- I may later add a function to return a phone number in a more human readable form like: (555) 234-5678
+ Now prints a "Human Readable: 555-234-5678" if the input number was like "5552345678". (Also works with phonewords)
 
- Functionality is now integrated into my call logger python program.
+ Most Functionality is now integrated into my call logger python program.
 
  Now translates phonewords by default!
 
@@ -22,6 +22,16 @@ Before: (555) 234-5678
 After: 5552345678
 
 ```
+Basic Example 2:
+```
+
+Enter Phone Number: 5552345678
+Human Readable: 555-234-5678
+
+
+After: 5552345678
+
+```
 
 Phoneword Example:
 ```
@@ -29,6 +39,20 @@ Phoneword Example:
 Enter Phone Number: (555) ADG-JMPT
 Required Translation: True
 Before: (555) 234-5678
+
+After: 5552345678
+
+```
+
+Phoneword Example 2:
+```
+
+Enter Phone Number: 555ADGJMPT
+Human Readable: 555-ADG-JMPT
+
+Required Translation: True
+Human Readable: 555-234-5678
+
 
 After: 5552345678
 
