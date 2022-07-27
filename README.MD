@@ -16,54 +16,54 @@
 After you enter the "phone number" hit enter
 ```
 
-Enter Phone Number: (555) 234-5678
-Before: (555) 234-5678
+Before: 555-555-0199
 
-After: 5552345678
+After: 5555550199
 
-Outgoing Format: 15552345678
+Outgoing Format: 15555550199
+
 
 ```
 Basic Example 2:
 ```
 
-Enter Phone Number: 5552345678
-Human Readable: 555-234-5678
+Enter Phone Number: 5555550199
+Human Readable: 555-555-0199
 
-Human Readable: 555-234-5678
+Human Readable: 555-555-0199
 
 
-After: 5552345678
+After: 5555550199
 
-Outgoing Format: 15552345678
+Outgoing Format: 15555550199
 
 ```
 
 Phoneword Example:
 ```
 
-Enter Phone Number: (555) ADG-JMPT
+Enter Phone Number: 555-JJK-01GO
 Required Translation: True
-Before: (555) 234-5678
+Before: 555-555-0146
 
-After: 5552345678
+After: 5555550146
 
-Outgoing Format: 15552345678
+Outgoing Format: 15555550146
 
 ```
 
 Phoneword Example 2:
 ```
 
-Enter Phone Number: 555ADGJMPT
-Human Readable: 555-ADG-JMPT
+Enter Phone Number: 555JJK01GO
+Human Readable: 555-JJK-01GO
 
 Required Translation: True
-Human Readable: 555-234-5678
+Human Readable: 555-555-0146
 
 
-After: 5552345678
+After: 5555550146
 
-Outgoing Format: 15552345678
+Outgoing Format: 15555550146
 
 ```
