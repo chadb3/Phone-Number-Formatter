@@ -1,11 +1,11 @@
 # Correct Phone Number
- This is to correct phone numbers. Some software won't accept phone numbers variants like: (555) 234-5678 or 555-234-5678
+ This is to correct phone numbers. Some software won't accept phone numbers variants like: (202) 555-0100 or 202-555-0100
 
- This will correct it down to 5552345678
+ This will correct it down to 2025550100
 
  Using this will reduce errors that could be introduced by manually typing the numbers.
 
- Now prints a "Human Readable: 555-234-5678" if the input number was like "5552345678". (Also works with phonewords)
+ Now prints a "Human Readable: 555-555-0199" if the input number was like "5555550199". (Also works with phonewords)
 
  Most Functionality is now integrated into my call logger python program.
 
