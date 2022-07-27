@@ -4,6 +4,7 @@ import re
 # Removes Phonewords
 # then calls nullPhone(may later rename) to remove formatting for easy copy paste to software that doesn't like it. 
 def translatePhone(phoneNumberIn):
+	# This is here if a phoneword was input without formatting (example: "-" )
 	humanReadable(phoneNumberIn)
 	#stores if it the number was translated or not.
 	bool_Required_translation = False
@@ -23,7 +24,7 @@ def translatePhone(phoneNumberIn):
 			retPhoneStr+=phoneNumberIn[i]
 	if(bool_Required_translation):
 		print("Required Translation: {}".format(bool_Required_translation))
-		humanReadable(retPhoneStr)
+	humanReadable(retPhoneStr)
 	nullPhone(retPhoneStr)
 	return 0
 # Takes in a "Phone Number"
@@ -40,20 +41,26 @@ def nullPhone(phoneNumberIn):
 	# prints only the digits (0-9)
 	# in other words, anything that wasn't a digit is destroyed.
 	print("\nAfter: {}\n".format(newPhone))
+	callOut(newPhone)
 	return 0
 # This will be responsible for printing a "Human Readable" phone number if one was not provided
 # if 5552345678 was entered, then it will print "Human Readable: 555-234-5678"
 # will also work with phone words. If "555ADGJMPT" was entered it will print "Human Readable: 555-ADG-JMPT"
 def humanReadable(phoneNumberIn):
-	humanReadbleNum=""
+	humanReadableNum=""
 	if(len(phoneNumberIn)==10):
 		for i in range(0,len(phoneNumberIn)):
 			#print(phoneNumberIn[i],end="")
-			humanReadbleNum+=phoneNumberIn[i]
+			humanReadableNum+=phoneNumberIn[i]
 			if(i==2 or i==5):
 				#print("-",end="")
-				humanReadbleNum+="-"
-		print("Human Readable: {}\n".format(humanReadbleNum))
+				humanReadableNum+="-"
+		print("Human Readable: {}\n".format(humanReadableNum))
+	return 0
+# prints number in a form to copy and paste out to phone software.
+# adds a 1 for US based calls.
+def callOut(phoneNumberIn):
+	print("Outgoing Format: {}\n".format("1"+phoneNumberIn))
 	return 0
 # main calls the function currently called nullPhone (that removes everything that is not a digit).
 def main():

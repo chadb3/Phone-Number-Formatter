@@ -21,6 +21,8 @@ Before: (555) 234-5678
 
 After: 5552345678
 
+Outgoing Format: 15552345678
+
 ```
 Basic Example 2:
 ```
@@ -28,8 +30,12 @@ Basic Example 2:
 Enter Phone Number: 5552345678
 Human Readable: 555-234-5678
 
+Human Readable: 555-234-5678
+
 
 After: 5552345678
+
+Outgoing Format: 15552345678
 
 ```
 
@@ -41,6 +47,8 @@ Required Translation: True
 Before: (555) 234-5678
 
 After: 5552345678
+
+Outgoing Format: 15552345678
 
 ```
 
@@ -55,5 +63,7 @@ Human Readable: 555-234-5678
 
 
 After: 5552345678
+
+Outgoing Format: 15552345678
 
 ```
