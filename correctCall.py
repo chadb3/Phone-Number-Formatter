@@ -24,7 +24,8 @@ def translatePhone(phoneNumberIn):
 			retPhoneStr+=phoneNumberIn[i]
 	if(bool_Required_translation):
 		print("Required Translation: {}".format(bool_Required_translation))
-	humanReadable(retPhoneStr)
+		#found out this was required or it will print twice...
+		humanReadable(retPhoneStr)
 	nullPhone(retPhoneStr)
 	return 0
 # Takes in a "Phone Number"
