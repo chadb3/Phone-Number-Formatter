@@ -16,12 +16,12 @@
 After you enter the "phone number" hit enter
 ```
 
-Before: 555-555-0199
+Enter Phone Number: 202-555-0199
+Before: 202-555-0199
 
-After: 5555550199
+After: 2025550199
 
-Outgoing Format: 15555550199
-
+Outgoing Format: 12025550199
 
 ```
 Basic Example 2:
