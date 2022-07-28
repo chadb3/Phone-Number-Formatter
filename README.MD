@@ -27,43 +27,41 @@ Outgoing Format: 12025550199
 Basic Example 2:
 ```
 
-Enter Phone Number: 5555550199
-Human Readable: 555-555-0199
-
-Human Readable: 555-555-0199
+Enter Phone Number: 2025550199
+Human Readable: 202-555-0199
 
 
-After: 5555550199
+After: 2025550199
 
-Outgoing Format: 15555550199
+Outgoing Format: 12025550199
 
 ```
 
 Phoneword Example:
 ```
 
-Enter Phone Number: 555-JJK-01GO
+Enter Phone Number: 760-JJK-01GO
 Required Translation: True
-Before: 555-555-0146
+Before: 760-555-0146
 
-After: 5555550146
+After: 7605550146
 
-Outgoing Format: 15555550146
+Outgoing Format: 17605550146
 
 ```
 
 Phoneword Example 2:
 ```
 
-Enter Phone Number: 555JJK01GO
-Human Readable: 555-JJK-01GO
+Enter Phone Number: 760JJK01GO
+Human Readable: 760-JJK-01GO
 
 Required Translation: True
-Human Readable: 555-555-0146
+Human Readable: 760-555-0146
 
 
-After: 5555550146
+After: 7605550146
 
-Outgoing Format: 15555550146
+Outgoing Format: 17605550146
 
 ```
