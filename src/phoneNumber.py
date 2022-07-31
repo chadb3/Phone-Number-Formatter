@@ -34,7 +34,8 @@ class Phone_Number:
 			retArr.append(theDigitsOnly[7:])
 		else:
 			this.isPhoneNumber = False
-			print("Error: Phone number segments not recoreded. Not A phone number.")
+			# DEBUG PRINT
+			#print("Error: Phone number segments not recoreded. Not A phone number.")
 			for iiii in range(0,4):
 				retArr.append("Not a Phone Number")
 		return retArr
@@ -86,8 +87,14 @@ class Phone_Number:
 		#print(i)
 		i=0
 	def printPhoneNumber(this):
+		dash = ""
 		if(this.isPhoneNumber):
-			for i in range(0,len(this.phone_number_as_entered)+len(" Phone Number AS ENTERED: {}")):
-				print("-",end='')
-			print("\n Phone Number AS ENTERED: {}\n\n\n  Phone Number: {}\n\n  Human Readable: {}\n\n  Outgoing Format: {}\n\n".format(this.phone_number_as_entered,this.paste_friendly,this.human_readable,this.outgoingFormat))
-
+			for i in range(0,len(this.phone_number_as_entered)+len(" Phone Number AS ENTERED: {}")+2):
+				dash+="-"
+				#print("-",end='')
+			print("{}\n|| Phone Number AS ENTERED: {}||\n{}\n\n  Phone Number: {}\n\n  Human Readable: {}\n\n  Outgoing Format: {}\n\n".format(dash,this.phone_number_as_entered,dash,this.paste_friendly,this.human_readable,this.outgoingFormat))
+		else:
+			NAPN="- NOT A PHONE NUMBER -"
+			for i in range(0,len(NAPN)):
+				dash+="-"
+			print("{}\n{}\n{}\n\t".format(dash,NAPN,dash))
