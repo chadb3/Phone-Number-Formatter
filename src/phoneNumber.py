@@ -33,6 +33,7 @@ class Phone_Number:
 			retArr.append(theDigitsOnly[4:7])
 			retArr.append(theDigitsOnly[7:])
 		else:
+			this.isPhoneNumber = False
 			print("Error: Phone number segments not recoreded. Not A phone number.")
 			for iiii in range(0,4):
 				retArr.append("Not a Phone Number")
@@ -42,6 +43,9 @@ class Phone_Number:
 		#strHumanReadable=strHumanReadable.format(phoneArrIn[1],phoneArrIn[2],phoneArrIn[3])
 		#print(strHumanReadable)
 		return strHumanReadable.format(phoneArrIn[1],phoneArrIn[2],phoneArrIn[3])
+	def _getCtrlcCtrlv(this, phoneArrIn):
+		strCopyPaste = "{}{}{}"
+		return strCopyPaste.format(phoneArrIn[1],phoneArrIn[2],phoneArrIn[3])
 	def _getPhoneNumberParts(this, PhoneNumberIn):
 		#retArr = ["translated phone number, "digits only (no formatting)", "(country code) 1-US",[["555"],["555"],["0100"]], "human readable format","outgoing format (ex: 15555550111)"]
 		retArr = []
@@ -49,10 +53,11 @@ class Phone_Number:
 		phoneNumOnlyDigits = this._getDigitsOnly(translatedPhone)
 		phoneSegments = this._getSplitDigits(phoneNumOnlyDigits)
 		humanReadable = this._getHumanReadable(phoneSegments)
-		outgoingFormat = "1"+phoneNumOnlyDigits
+		copyPaste = this._getCtrlcCtrlv(phoneSegments)
+		outgoingFormat = "1"+copyPaste
 		# return Array of Phone Number Segments for the Constructor
 		retArr.append(translatedPhone)
-		retArr.append(phoneNumOnlyDigits)
+		retArr.append(copyPaste)
 		retArr.append(phoneSegments)
 		retArr.append(humanReadable)
 		retArr.append(outgoingFormat)
@@ -60,10 +65,12 @@ class Phone_Number:
 		return retArr
 
 	def __init__(this,phoneNumberIn):
+		this.isPhoneNumber=True
 		# getting the parts of the phone number for easy manipulation
 		i = this._getPhoneNumberParts(phoneNumberIn)
 		# Phone Number as entered after running through getPhoneNumberParts
-		this.phone_number_as_entered=i[0]
+		# have to pass "phoneNumberIn" as otherwise it is already translated...
+		this.phone_number_as_entered=phoneNumberIn#i[0]
 		this.paste_friendly=i[1]
 		# Segments of phone number
 		this.country_code=i[2][0] # Country Code 1 for US
@@ -79,5 +86,8 @@ class Phone_Number:
 		#print(i)
 		i=0
 	def printPhoneNumber(this):
-		print("\nPhone Number AS ENTERED: {}\n\n\nPhone Number: {}\n\nHuman Readable: {}\n\nOutgoing Format: {}\n".format(this.phone_number_as_entered,this.paste_friendly,this.human_readable,this.outgoingFormat))
+		if(this.isPhoneNumber):
+			for i in range(0,len(this.phone_number_as_entered)+len(" Phone Number AS ENTERED: {}")):
+				print("-",end='')
+			print("\n Phone Number AS ENTERED: {}\n\n\n  Phone Number: {}\n\n  Human Readable: {}\n\n  Outgoing Format: {}\n\n".format(this.phone_number_as_entered,this.paste_friendly,this.human_readable,this.outgoingFormat))
 

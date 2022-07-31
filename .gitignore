@@ -1,3 +1,4 @@
 # Stuff to Ignore
 __pycache__/
 *.txt
+/testDir
