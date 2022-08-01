@@ -4,7 +4,7 @@ This is used to store the parts of the Phone_Number object.
 
 ## parts of Phone_Number
 
-###public variables
+### public variables
 
 -phone_number_as_entered
 -paste_friendly
@@ -16,7 +16,7 @@ This is used to store the parts of the Phone_Number object.
 -outgoingFormat
 
 
-###public functions
+### public functions
 
 
 -printPhoneNumber()
