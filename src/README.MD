@@ -6,20 +6,20 @@ This is used to store the parts of the Phone_Number object.
 
 ### public variables
 
--phone_number_as_entered
--paste_friendly
--country_code
--area_code
--central_office_code
--line_number
--human_readable
--outgoingFormat
+- phone_number_as_entered
+- paste_friendly
+- country_code
+- area_code
+- central_office_code
+- line_number
+- human_readable
+- outgoingFormat
 
 
 ### public functions
 
 
--printPhoneNumber()
+- printPhoneNumber()
 
 ## About Variables 
 
