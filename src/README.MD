@@ -28,32 +28,32 @@ This is used to store the parts of the Phone_Number object.
 The exact string as entered.
 ```
 
--paste_friendly
+- paste_friendly
 ```
 prints phone number without any formatting 
 ```
 
--country_code
--area_code
--central_office_code
--line_number
+- country_code
+- area_code
+- central_office_code
+- line_number
 ```
 each part of the phone number
 ```
 
--human_readable
+- human_readable
 ```
 prints "human readable" format (with dashes)
 ```
 
--outgoingFormat
+- outgoingFormat
 ```
 paste_friendly but with a one appended to the front
 ```
 
 ## About Functions
 
--printPhoneNumber()
+- printPhoneNumber()
 ```
 prints 
 phone_number_as_entered
