@@ -30,7 +30,7 @@ The exact string as entered.
 
 - paste_friendly
 ```
-prints phone number without any formatting 
+holds phone number without any formatting 
 ```
 
 - country_code
@@ -38,12 +38,12 @@ prints phone number without any formatting
 - central_office_code
 - line_number
 ```
-each part of the phone number
+each one holds part of the phone number
 ```
 
 - human_readable
 ```
-prints "human readable" format (with dashes)
+holds "human readable" format (with dashes)
 ```
 
 - outgoingFormat
