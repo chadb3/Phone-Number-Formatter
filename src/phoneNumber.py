@@ -98,3 +98,6 @@ class Phone_Number:
 			for i in range(0,len(NAPN)):
 				dash+="-"
 			print("{}\n{}\n{}\n\t".format(dash,NAPN,dash))
+	def getPhoneNumber(this):
+		return [this.country_code,this.area_code,this.central_office_code,this.line_number]
+
