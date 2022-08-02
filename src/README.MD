@@ -20,6 +20,7 @@ This is used to store the parts of the Phone_Number object.
 
 
 - printPhoneNumber()
+- getPhoneNumber()
 
 ## About Variables 
 
@@ -61,3 +62,9 @@ paste_friendly
 human_readable
 outgoingFormat
 ```
+
+- getPhoneNumber()
+```
+ returns [country_code,area_code,central_office_code,line_number]
+```
+note: returns as a array
