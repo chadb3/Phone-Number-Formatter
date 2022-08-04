@@ -67,6 +67,7 @@ class Phone_Number:
 
 	def __init__(this,phoneNumberIn):
 		this.isPhoneNumber=True
+		this.phoneExtension = ""
 		# getting the parts of the phone number for easy manipulation
 		i = this._getPhoneNumberParts(phoneNumberIn)
 		# Phone Number as entered after running through getPhoneNumberParts
@@ -88,11 +89,16 @@ class Phone_Number:
 		i=0
 	def printPhoneNumber(this):
 		dash = ""
-		if(this.isPhoneNumber):
+		if(this.isPhoneNumber and len(this.phoneExtension)==0):
 			for i in range(0,len(this.phone_number_as_entered)+len(" Phone Number AS ENTERED: {}")+2):
 				dash+="-"
 				#print("-",end='')
 			print("{}\n|| Phone Number AS ENTERED: {}||\n{}\n\n  Phone Number: {}\n\n  Human Readable: {}\n\n  Outgoing Format: {}\n\n".format(dash,this.phone_number_as_entered,dash,this.paste_friendly,this.human_readable,this.outgoingFormat))
+		elif(this.isPhoneNumber and len(this.phoneExtension)>0):
+			print("Phone Number with Extension !")
+			print("Phone Number: {} {}".format(this.paste_friendly,this.phoneExtension))
+			print("Human Readable: {} {}".format(this.human_readable,this.phoneExtension))
+			print("Outgoing Format: {} ---- {}".format(this.outgoingFormat,this.phoneExtension))
 		else:
 			NAPN="- NOT A PHONE NUMBER -"
 			for i in range(0,len(NAPN)):
@@ -100,4 +106,6 @@ class Phone_Number:
 			print("{}\n{}\n{}\n\t".format(dash,NAPN,dash))
 	def getPhoneNumber(this):
 		return [this.country_code,this.area_code,this.central_office_code,this.line_number]
-
+	def addExtension(this, extensionStr):
+		if(len(extensionStr)>0):
+			this.phoneExtension="Ext: "+extensionStr
