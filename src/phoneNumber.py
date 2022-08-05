@@ -64,6 +64,13 @@ class Phone_Number:
 		retArr.append(outgoingFormat)
 		# return the array
 		return retArr
+	def _printInDashes(this, thing_to_print):
+		dash = ''
+		for i in range(0,len(thing_to_print)+6):
+			dash+='-'
+		print("{}\n|| {} ||\n{} ".format(dash,thing_to_print,dash))
+		#print("len i (func test): {}".format(i))
+		return 0
 
 	def __init__(this,phoneNumberIn):
 		this.isPhoneNumber=True
@@ -88,22 +95,35 @@ class Phone_Number:
 		#print(i)
 		i=0
 	def printPhoneNumber(this):
-		dash = ""
-		if(this.isPhoneNumber and len(this.phoneExtension)==0):
-			for i in range(0,len(this.phone_number_as_entered)+len(" Phone Number AS ENTERED: {}")+2):
-				dash+="-"
+		print("\n")
+		#dash = ""
+		if(this.isPhoneNumber):
+			#for i in range(0,len(this.phone_number_as_entered)+len(" Phone Number AS ENTERED: {}")+2):
+				#dash+="-"
 				#print("-",end='')
-			print("{}\n|| Phone Number AS ENTERED: {}||\n{}\n\n  Phone Number: {}\n\n  Human Readable: {}\n\n  Outgoing Format: {}\n\n".format(dash,this.phone_number_as_entered,dash,this.paste_friendly,this.human_readable,this.outgoingFormat))
-		elif(this.isPhoneNumber and len(this.phoneExtension)>0):
-			print("Phone Number with Extension !")
-			print("Phone Number: {} {}".format(this.paste_friendly,this.phoneExtension))
-			print("Human Readable: {} {}".format(this.human_readable,this.phoneExtension))
-			print("Outgoing Format: {} ---- {}".format(this.outgoingFormat,this.phoneExtension))
+			#print("---- i: {}".format(i))
+			if( len(this.phoneExtension)==0):
+				#print("\n")
+				this._printInDashes("Phone Number as entered: "+this.phone_number_as_entered)
+				print("\n\n  Phone Number: {}\n\n  Human Readable: {}\n\n  Outgoing Format: {}\n\n".format(this.paste_friendly,this.human_readable,this.outgoingFormat))
+				#print("{}\n|| Phone Number AS ENTERED: {}||\n{}\n\n  Phone Number: {}\n\n  Human Readable: {}\n\n  Outgoing Format: {}\n\n".format(dash,this.phone_number_as_entered,dash,this.paste_friendly,this.human_readable,this.outgoingFormat))
+			elif(len(this.phoneExtension)>0):
+				print("  Phone Number with Extension !")
+				this._printInDashes("Phone Number As Entered: "+this.phone_number_as_entered)
+				#print("\n{}\n|| Phone Number As Entered: {} ||\n{}".format(dash,this.phone_number_as_entered,dash))
+				print("\n\n  Phone Number: {} \n  Extension: {}".format(this.paste_friendly,this.phoneExtension[5:]))
+				print("\n  Human Readable: {} {}".format(this.human_readable,this.phoneExtension))
+				print("\n  Outgoing Format: {} ---- {}".format(this.outgoingFormat,this.phoneExtension))
 		else:
 			NAPN="- NOT A PHONE NUMBER -"
-			for i in range(0,len(NAPN)):
-				dash+="-"
-			print("{}\n{}\n{}\n\t".format(dash,NAPN,dash))
+			#for i in range(0,len(NAPN)):
+				#dash+="-"
+			this._printInDashes(NAPN)
+			this._printInDashes(this.phone_number_as_entered)
+			this._printInDashes(NAPN)
+			#print("{}\n{}\n{}\n\t".format(dash,NAPN,dash))
+		print("\n")
+		return 0
 	def getPhoneNumber(this):
 		return [this.country_code,this.area_code,this.central_office_code,this.line_number]
 	def addExtension(this, extensionStr):
