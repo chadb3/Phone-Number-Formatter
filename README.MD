@@ -35,6 +35,10 @@ Extension (leave blank if no):
 Basic Example 2:
 ```
 
+Enter Phone Number: 2025550199
+Extension (leave blank if no):
+
+
 -----------------------------------------
 || Phone Number as entered: 2025550199 ||
 -----------------------------------------
@@ -45,35 +49,70 @@ Basic Example 2:
   Human Readable: 202-555-0199
 
   Outgoing Format: 12025550199
-  
+
 
 ```
 
 Phoneword Example:
 ```
 
-Enter Phone Number: 760-JJK-01GO
-Required Translation: True
-Before: 760-555-0146
+Enter Phone Number: 202-JJK-01GO
+Extension (leave blank if no):
 
-After: 7605550146
 
-Outgoing Format: 17605550146
+-------------------------------------------
+|| Phone Number as entered: 202-JJK-01GO ||
+-------------------------------------------
+
+
+  Phone Number: 2025550146
+
+  Human Readable: 202-555-0146
+
+  Outgoing Format: 12025550146
+
 
 ```
 
 Phoneword Example 2:
 ```
 
-Enter Phone Number: 760JJK01GO
-Human Readable: 760-JJK-01GO
-
-Required Translation: True
-Human Readable: 760-555-0146
+Enter Phone Number: 202JJK01GO
+Extension (leave blank if no):
 
 
-After: 7605550146
+-----------------------------------------
+|| Phone Number as entered: 202JJK01GO ||
+-----------------------------------------
 
-Outgoing Format: 17605550146
 
+  Phone Number: 2025550146
+
+  Human Readable: 202-555-0146
+
+  Outgoing Format: 12025550146
+
+
+```
+
+Extension Example:
+```
+
+Enter Phone Number: 2025550146
+Extension (leave blank if no): 3
+
+
+  Phone Number with Extension !
+-----------------------------------------
+|| Phone Number As Entered: 2025550146 ||
+-----------------------------------------
+
+
+  Phone Number: 2025550146
+  Extension: 3
+
+  Human Readable: 202-555-0146 Ext: 3
+
+  Outgoing Format: 12025550146 ---- Ext: 3
+  
 ```
