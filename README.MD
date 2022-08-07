@@ -35,13 +35,17 @@ Extension (leave blank if no):
 Basic Example 2:
 ```
 
-Enter Phone Number: 2025550199
-Human Readable: 202-555-0199
+-----------------------------------------
+|| Phone Number as entered: 2025550199 ||
+-----------------------------------------
 
 
-After: 2025550199
+  Phone Number: 2025550199
 
-Outgoing Format: 12025550199
+  Human Readable: 202-555-0199
+
+  Outgoing Format: 12025550199
+  
 
 ```
 
