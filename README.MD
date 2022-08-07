@@ -17,11 +17,19 @@ After you enter the "phone number" hit enter
 ```
 
 Enter Phone Number: 202-555-0199
-Before: 202-555-0199
+Extension (leave blank if no): 
 
-After: 2025550199
 
-Outgoing Format: 12025550199
+-------------------------------------------
+|| Phone Number as entered: 202-555-0199 ||
+------------------------------------------- 
+
+
+  Phone Number: 2025550199
+
+  Human Readable: 202-555-0199
+
+  Outgoing Format: 12025550199
 
 ```
 Basic Example 2:
