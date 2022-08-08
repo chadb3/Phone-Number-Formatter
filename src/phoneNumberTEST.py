@@ -1,0 +1,11 @@
+from phoneNumber import *
+print("--"*24)
+print("Testing phone number from 201 area code (NJ)")
+a=Phone_Number("201-555-0100")
+a.printPhoneNumber()
+a.checkAreaCode()
+print("-~"*24)
+print("\nTesting phone number from 981 area code (not used (yet))")
+b=Phone_Number("981-555-0100")
+b.printPhoneNumber()
+b.checkAreaCode()

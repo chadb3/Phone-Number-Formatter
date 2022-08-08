@@ -95,7 +95,7 @@ class Phone_Number:
 		#print(i)
 		i=0
 	def printPhoneNumber(this):
-		print("\n")
+		print("")
 		#dash = ""
 		if(this.isPhoneNumber):
 			#for i in range(0,len(this.phone_number_as_entered)+len(" Phone Number AS ENTERED: {}")+2):
@@ -105,7 +105,7 @@ class Phone_Number:
 			if( len(this.phoneExtension)==0):
 				#print("\n")
 				this._printInDashes("Phone Number as entered: "+this.phone_number_as_entered)
-				print("\n\n  Phone Number: {}\n\n  Human Readable: {}\n\n  Outgoing Format: {}\n\n".format(this.paste_friendly,this.human_readable,this.outgoingFormat))
+				print("\n\n  Phone Number: {}\n\n  Human Readable: {}\n\n  Outgoing Format: {}".format(this.paste_friendly,this.human_readable,this.outgoingFormat))
 				#print("{}\n|| Phone Number AS ENTERED: {}||\n{}\n\n  Phone Number: {}\n\n  Human Readable: {}\n\n  Outgoing Format: {}\n\n".format(dash,this.phone_number_as_entered,dash,this.paste_friendly,this.human_readable,this.outgoingFormat))
 			elif(len(this.phoneExtension)>0):
 				print("  Phone Number with Extension !")
@@ -122,10 +122,28 @@ class Phone_Number:
 			this._printInDashes(this.phone_number_as_entered)
 			this._printInDashes(NAPN)
 			#print("{}\n{}\n{}\n\t".format(dash,NAPN,dash))
-		print("\n")
+		#print("\n") was adding 2 spaces... I only wanted one
+		print("")
 		return 0
 	def getPhoneNumber(this):
 		return [this.country_code,this.area_code,this.central_office_code,this.line_number]
 	def addExtension(this, extensionStr):
 		if(len(extensionStr)>0):
 			this.phoneExtension="Ext: "+extensionStr
+			return 0
+		return 0
+# starting work on this
+# should print the state the area code is part of
+# working on getting a list of area codes and their associated states.
+	def checkAreaCode(this):
+		this._printInDashes("Checking Area Code:")
+		testAreaCodeList = {201:"NJ", 202:"DC"}
+		testStateList = {"NJ":"New Jersey", "DC":"District Of Columbia"}
+		try:
+			statAbbr = testAreaCodeList[int(this.area_code)]
+			state = testStateList[statAbbr]
+			print("  State: {} ({})".format(state,statAbbr))
+		except:
+			print("  Not found or added to list yet")
+		print("")
+		return 0
