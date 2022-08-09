@@ -137,11 +137,19 @@ class Phone_Number:
 # working on getting a list of area codes and their associated states.
 	def checkAreaCode(this):
 		this._printInDashes("Checking Area Code:")
-		testAreaCodeList = {201:"NJ", 202:"DC"}
-		testStateList = {"NJ":"New Jersey", "DC":"District Of Columbia"}
+		# see source in data file.
+		# looking at creating that list programmatically or creating and using a DB
+		# still just US States and not any Territories yet
+		testAreaCodeList = {201:"NJ", 202:"DC", 203:"CT",205:"AL", 206:"WA",207:"ME",208:"ID"}
+		# finsihed list of states. (Still just a test)
+		# Still might use a DB in the data file
+		testStateList = {"AL":"Alabama", "AK":"Alaska","AZ":"Arizona","AR":"Arkansas", "CA":"California","CO":"Colorado","CT":"Connecticut","DE":"Delaware","DC":"District Of Columbia","FL":"Florida", "GA":"Georgia", "HI":"Hawaii","ID":"Idaho", "IN":"Indiana", "IA":"Iowa","KS":"Kansas","KY":"Kentucky", "LA":"Louisiana","ME":"Maine","MD":"Maryland", "MA":"Massachusetts","MI":"Michigan","MN":"Minnesota","MS":"Mississippi","MO":"Missouri","MT":"Montana","NE":"Nebraska","NV":"Nevada","NH":"New Hampshire","NJ":"New Jersey", "NM":"New Mexico", "NY":"New York", "NC":"North Carolina", "ND":"North Dakota", "OH":"Ohio", "OK":"Oklahoma","OR":"Oregon", "PA":"Pennsylvania", "RI":"Rhode Island", "SC":"South Carolina", "SD":"South Dakota", "TN":"Tennessee","TX":"Texas","UT":"Utah","VT":"Vermont","VA":"Virginia", "WA":"Washington","WV":"West Virginia","WI":"Wisconsin","WY":"Wyoming" }
 		try:
 			statAbbr = testAreaCodeList[int(this.area_code)]
-			state = testStateList[statAbbr]
+			try:
+				state = testStateList[statAbbr]
+			except:
+				state = "Not In List"
 			print("  State: {} ({})".format(state,statAbbr))
 		except:
 			print("  Not found or added to list yet")
