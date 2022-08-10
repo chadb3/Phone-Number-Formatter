@@ -7,9 +7,12 @@ testDir/ # ignore test directory
 #
 # Text type files to ignore
 #
-*.txt # ignore .txt files that might be used for notes or accidentally added.
-*.un~ # ignore this. created by vim on (my) Windows configuration.
-*.txt~ # also created by Windows VIM.
+*.txt 
+# ignore .txt files that might be used for notes or accidentally added.
+*.un~ 
+# ignore this. created by vim on (my) Windows configuration.
+*.txt~ 
+# also created by Windows VIM.
 #
 #  test files
 #
