@@ -158,4 +158,7 @@ class Phone_Number:
 		return 0
 	def createFictionalPhoneNumber(this):
 		print("asdf")
+		print("area code")
+		# use GUI to cut and paste to constructor ...
+		# keys = list(testAreaCodeList.keys())
 		return 0
