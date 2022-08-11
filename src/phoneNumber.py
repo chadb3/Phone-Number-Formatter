@@ -72,7 +72,7 @@ class Phone_Number:
 		#print("len i (func test): {}".format(i))
 		return 0
 
-	def __init__(this,phoneNumberIn):
+	def __init__(this,phoneNumberIn="1 000-000-0000"):
 		this.isPhoneNumber=True
 		this.phoneExtension = ""
 		# getting the parts of the phone number for easy manipulation
@@ -155,4 +155,7 @@ class Phone_Number:
 		except:
 			print("  Not found or added to list yet")
 		print("")
+		return 0
+	def createFictionalPhoneNumber(this):
+		print("asdf")
 		return 0
