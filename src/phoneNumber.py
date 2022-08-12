@@ -1,4 +1,5 @@
 import re
+from random import randint
 # import like see __init__.py
 # Phone_Number class to store a "Phone Number" object.
 class Phone_Number:
@@ -156,9 +157,18 @@ class Phone_Number:
 			print("  Not found or added to list yet")
 		print("")
 		return 0
+	# Generates a phone number in the fictional range.
+	# note: this follows everyone following the North American plan, and has places in Canada and other Territories. 
 	def createFictionalPhoneNumber(this):
-		print("asdf")
-		print("area code")
+		#print("asdf")
+		#print("area code")
+		areaCodeList = list(this._testAreaCodeList.keys())
+		MAX=len(areaCodeList)-1
+		index=randint(0,MAX)
+		areaCode = str(areaCodeList[index])
+		centOfficeCode=str(555)
+		lineNumber = "0"+str(randint(100,199))
+		#print(areaCode+centOfficeCode+lineNumber)
 		# use GUI to cut and paste to constructor ...
 		# keys = list(testAreaCodeList.keys())
-		return 0
+		return Phone_Number(areaCode+centOfficeCode+lineNumber)
