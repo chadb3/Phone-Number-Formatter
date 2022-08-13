@@ -172,3 +172,8 @@ class Phone_Number:
 		# use GUI to cut and paste to constructor ...
 		# keys = list(testAreaCodeList.keys())
 		return Phone_Number(areaCode+centOfficeCode+lineNumber)
+	def __str__(this):
+		if(this.isPhoneNumber):
+			return "{}-{}-{}".format(this.area_code,this.central_office_code,this.line_number)
+		else:
+			return "Not a Phone Number"
