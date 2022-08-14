@@ -178,3 +178,21 @@ class Phone_Number:
 			return "{}-{}-{}".format(this.area_code,this.central_office_code,this.line_number)
 		else:
 			return "Not a Phone Number"
+	# Don't know why you would need this. But I added it...
+	def __int__(this):
+		if(this.isPhoneNumber):
+			return int("{}{}{}".format(this.area_code,this.central_office_code,this.line_number))
+		else:
+			return 0
+	# This is so you can use hex() and oct () as overriding hex like __hex__(self): did not work
+	def __index__(this):
+		return int(this)
+	#< did not work >
+	#def __hex__(this):
+		#print("THIS: {}".format(this))
+		#if(this.isPhoneNumber):
+			#print(this*2)
+			#return(hex(2989))
+		#else:
+			#return(hex(0))
+	#< /did not work >
