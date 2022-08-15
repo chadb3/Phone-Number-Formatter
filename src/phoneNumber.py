@@ -187,12 +187,7 @@ class Phone_Number:
 	# This is so you can use hex() and oct () as overriding hex like __hex__(self): did not work
 	def __index__(this):
 		return int(this)
-	#< did not work >
-	#def __hex__(this):
-		#print("THIS: {}".format(this))
-		#if(this.isPhoneNumber):
-			#print(this*2)
-			#return(hex(2989))
-		#else:
-			#return(hex(0))
-	#< /did not work >
+	def __getitem__(this, index):
+		return this.paste_friendly[index]
+	# need the below too
+	# __setitem__and __delitem__
