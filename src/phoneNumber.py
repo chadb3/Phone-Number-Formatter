@@ -78,6 +78,7 @@ class Phone_Number:
 		this._testStateList = {"AL":"Alabama", "AK":"Alaska","AZ":"Arizona","AR":"Arkansas", "CA":"California","CO":"Colorado","CT":"Connecticut","DE":"Delaware","DC":"District Of Columbia","FL":"Florida", "GA":"Georgia", "HI":"Hawaii","ID":"Idaho", "IN":"Indiana", "IA":"Iowa","IL":"Illinois","KS":"Kansas","KY":"Kentucky", "LA":"Louisiana","ME":"Maine","MD":"Maryland", "MA":"Massachusetts","MI":"Michigan","MN":"Minnesota","MS":"Mississippi","MO":"Missouri","MT":"Montana","NE":"Nebraska","NV":"Nevada","NH":"New Hampshire","NJ":"New Jersey", "NM":"New Mexico", "NY":"New York", "NC":"North Carolina", "ND":"North Dakota", "OH":"Ohio", "OK":"Oklahoma","OR":"Oregon", "PA":"Pennsylvania", "RI":"Rhode Island", "SC":"South Carolina", "SD":"South Dakota", "TN":"Tennessee","TX":"Texas","UT":"Utah","VT":"Vermont","VA":"Virginia", "WA":"Washington","WV":"West Virginia","WI":"Wisconsin","WY":"Wyoming" }
 		this.isPhoneNumber=True
 		this.phoneExtension = ""
+		# need to split out most of the below to their own functions
 		# getting the parts of the phone number for easy manipulation
 		i = this._getPhoneNumberParts(phoneNumberIn)
 		# Phone Number as entered after running through getPhoneNumberParts
@@ -189,5 +190,13 @@ class Phone_Number:
 		return int(this)
 	def __getitem__(this, index):
 		return this.paste_friendly[index]
-	# need the below too
+	# need the below too Maybe
 	# __setitem__and __delitem__
+	def generateRandom(this):
+		areaCodeList = list(this._testAreaCodeList.keys())
+		MAX=len(areaCodeList)-1
+		index=randint(0,MAX)
+		areaCode = str(areaCodeList[index])
+		Code=str(randint(111,999))
+		LineNumber=str(randint(1111,9999))
+		return Phone_Number(areaCode+Code+LineNumber)
