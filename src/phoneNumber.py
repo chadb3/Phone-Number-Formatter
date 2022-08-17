@@ -140,7 +140,7 @@ class Phone_Number:
 # should print the state the area code is part of
 # working on getting a list of area codes and their associated states.
 	def checkAreaCode(this):
-		this._printInDashes("Checking Area Code:")
+		#this._printInDashes("Checking Area Code:")
 		# see source in data file.
 		# looking at creating that list programmatically or creating and using a DB
 		# still just US States and not any Territories yet
@@ -200,3 +200,11 @@ class Phone_Number:
 		Code=str(randint(111,999))
 		LineNumber=str(randint(1111,9999))
 		return Phone_Number(areaCode+Code+LineNumber)
+	def checkDistance(this, phoneNumIn):
+		print("Checking Distance: ")
+		# use datastructure too see how many states are between...
+		# Still working on this.
+		if(this.area_code==phoneNumIn.area_code):
+			print(" Local")
+		else:
+			print(" Not Local")
