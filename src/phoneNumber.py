@@ -147,6 +147,7 @@ class Phone_Number:
 		#testAreaCodeList = {201:"NJ", 202:"DC", 203:"CT",205:"AL", 206:"WA",207:"ME",208:"ID"}
 		# finsihed list of states. (Still just a test)
 		# Still might use a DB in the data file
+		state =""
 		try:
 			statAbbr = this._testAreaCodeList[int(this.area_code)]
 			try:
@@ -158,7 +159,7 @@ class Phone_Number:
 		except:
 			print("  Not found or added to list yet")
 		print("")
-		return 0
+		return state
 	# Generates a phone number in the fictional range.
 	# note: this follows everyone following the North American plan, and has places in Canada and other Territories. 
 	def createFictionalPhoneNumber(this):
@@ -203,8 +204,10 @@ class Phone_Number:
 	def checkDistance(this, phoneNumIn):
 		print("Checking Distance: ")
 		# use datastructure too see how many states are between...
-		# Still working on this.
+		# Still working on this...
 		if(this.area_code==phoneNumIn.area_code):
-			print(" Local")
+			print("  Local")
+		elif(this.checkAreaCode()==phoneNumIn.checkAreaCode()):
+			print("  Same State")
 		else:
-			print(" Not Local")
+			print("  Not Same State")
