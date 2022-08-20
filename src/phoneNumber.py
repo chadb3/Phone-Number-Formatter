@@ -38,6 +38,7 @@ class Phone_Number:
 			# DEBUG PRINT
 			#print("Error: Phone number segments not recoreded. Not A phone number.")
 			for iiii in range(0,4):
+				print("NAN Debug: {}".format(theDigitsOnly))
 				retArr.append("Not a Phone Number")
 		return retArr
 	def _getHumanReadable(this, phoneArrIn):
@@ -179,6 +180,9 @@ class Phone_Number:
 		if(this.isPhoneNumber):
 			return "{}-{}-{}".format(this.area_code,this.central_office_code,this.line_number)
 		else:
+			#debug
+			#print("NaN Debug: ".format(this.phone_number_as_entered))
+			#/debug
 			return "Not a Phone Number"
 	# Don't know why you would need this. But I added it...
 	def __int__(this):
@@ -203,11 +207,11 @@ class Phone_Number:
 		if(Code<10):
 			tmp="00"+str(Code)
 			Code=tmp
-		elif(Code>10 and Code<99):
+		elif(Code>=10 and Code<=99):
 			tmp="0"+str(Code)
 			Code=tmp
 		else:
-			#print("HIT") #debug
+			#print("TEST HIT: {}".format(Code)) #debug
 			Code=str(Code)
 		LineNumber=str(randint(1111,9999))
 		return Phone_Number(areaCode+Code+LineNumber)
