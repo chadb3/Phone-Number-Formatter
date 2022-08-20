@@ -191,14 +191,24 @@ class Phone_Number:
 		return int(this)
 	def __getitem__(this, index):
 		return this.paste_friendly[index]
-	# need the below too Maybe
+	# need to review code above. generated phone numbers can generate a "Not A Phone Number..."
 	# __setitem__and __delitem__
 	def generateRandom(this):
 		areaCodeList = list(this._testAreaCodeList.keys())
 		MAX=len(areaCodeList)-1
 		index=randint(0,MAX)
 		areaCode = str(areaCodeList[index])
-		Code=str(randint(111,999))
+		Code=randint(1,999)
+		#print(Code) #debug
+		if(Code<10):
+			tmp="00"+str(Code)
+			Code=tmp
+		elif(Code>10 and Code<99):
+			tmp="0"+str(Code)
+			Code=tmp
+		else:
+			#print("HIT") #debug
+			Code=str(Code)
 		LineNumber=str(randint(1111,9999))
 		return Phone_Number(areaCode+Code+LineNumber)
 	def checkDistance(this, phoneNumIn):
