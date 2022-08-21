@@ -213,7 +213,17 @@ class Phone_Number:
 		else:
 			#print("TEST HIT: {}".format(Code)) #debug
 			Code=str(Code)
-		LineNumber=str(randint(1111,9999))
+		LineNumber=randint(1,9999)
+		tmpLN=""
+		if(LineNumber<10):
+			tmpLN="000"+str(LineNumber)
+		elif(LineNumber>=10 and LineNumber <=99):
+			tmpLN="00"+str(LineNumber)
+		elif(LineNumber>=99 and LineNumber<1000):
+			tmpLN="0"+str(LineNumber)
+		else:
+			tmpLN=str(LineNumber)
+		LineNumber=tmpLN
 		return Phone_Number(areaCode+Code+LineNumber)
 	def checkDistance(this, phoneNumIn):
 		print("Checking Distance: ")
