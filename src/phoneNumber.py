@@ -38,7 +38,7 @@ class Phone_Number:
 			# DEBUG PRINT
 			#print("Error: Phone number segments not recoreded. Not A phone number.")
 			for iiii in range(0,4):
-				print("NAN Debug: {}".format(theDigitsOnly))
+				#print("NAN Debug: {}".format(theDigitsOnly))
 				retArr.append("Not a Phone Number")
 		return retArr
 	def _getHumanReadable(this, phoneArrIn):
