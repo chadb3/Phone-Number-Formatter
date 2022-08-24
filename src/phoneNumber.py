@@ -111,6 +111,7 @@ class Phone_Number:
 				#print("\n")
 				this._printInDashes("Phone Number as entered: "+this.phone_number_as_entered)
 				print("\n\n  Phone Number: {}\n\n  Human Readable: {}\n\n  Outgoing Format: {}".format(this.paste_friendly,this.human_readable,this.outgoingFormat))
+				this.checkAreaCode()
 				#print("{}\n|| Phone Number AS ENTERED: {}||\n{}\n\n  Phone Number: {}\n\n  Human Readable: {}\n\n  Outgoing Format: {}\n\n".format(dash,this.phone_number_as_entered,dash,this.paste_friendly,this.human_readable,this.outgoingFormat))
 			elif(len(this.phoneExtension)>0):
 				print("  Phone Number with Extension !")
@@ -119,6 +120,7 @@ class Phone_Number:
 				print("\n\n  Phone Number: {} \n  Extension: {}".format(this.paste_friendly,this.phoneExtension[5:]))
 				print("\n  Human Readable: {} {}".format(this.human_readable,this.phoneExtension))
 				print("\n  Outgoing Format: {} ---- {}".format(this.outgoingFormat,this.phoneExtension))
+				this.checkAreaCode()
 		else:
 			NAPN="- NOT A PHONE NUMBER -"
 			#for i in range(0,len(NAPN)):

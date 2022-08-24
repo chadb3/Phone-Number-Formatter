@@ -13,3 +13,6 @@ class phoneNumberManager():
         #may adjust to be actual at a later date.
         for phone_number in this._PN_LIST:
             print(phone_number)
+    def detailedPrint(this):
+        for pn in this._PN_LIST:
+            pn.printPhoneNumber()
