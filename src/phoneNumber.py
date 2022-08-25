@@ -237,3 +237,5 @@ class Phone_Number:
 			print("  Same State")
 		else:
 			print("  Not Same State")
+	def genPhoneNumberFromSpecificPlace(this, place):
+		print("Generating phone number from: {} (WIP)".format(place))
