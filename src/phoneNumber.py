@@ -239,3 +239,8 @@ class Phone_Number:
 			print("  Not Same State")
 	def genPhoneNumberFromSpecificPlace(this, place):
 		print("Generating phone number from: {} (WIP)".format(place))
+		listOfAreaCodes=[]
+		for i in this._testAreaCodeList:
+			if(this._testAreaCodeList[i]==place):
+				listOfAreaCodes.append(i)
+				print(i)
