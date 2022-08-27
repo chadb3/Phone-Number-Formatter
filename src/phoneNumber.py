@@ -243,4 +243,14 @@ class Phone_Number:
 		for i in this._testAreaCodeList:
 			if(this._testAreaCodeList[i]==place):
 				listOfAreaCodes.append(i)
-				print(i)
+				print(listOfAreaCodes)
+	#instead of the above with 2 separate functions
+	# now you will pass the number of digits to generate
+	def genRandV2(this, numDigits):
+		print("V2 version of gen random.")
+		retNumber=0
+		aMax=""
+		for i in range(0,numDigits):
+			aMax+="9"
+		retNumber=randint(1,int(aMax))
+		print(retNumber)
