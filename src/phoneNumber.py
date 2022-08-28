@@ -99,6 +99,12 @@ class Phone_Number:
 		#this.translatePhone(phoneNumberIn)
 		#print(i)
 		i=0
+		# used for noting things like if you need to ask for someone.
+		# (like if it is a main line for a business)
+		# use of extensions
+		this.phoneNumberNotes=""
+		# cell, work, home, etc.
+		this.phoneNumberType=""
 	def printPhoneNumber(this):
 		print("")
 		#dash = ""
@@ -254,3 +260,13 @@ class Phone_Number:
 			aMax+="9"
 		retNumber=randint(1,int(aMax))
 		print(retNumber)
+	def addNotes(this, note):
+		appNote=str(note)
+		#noting here so I don't have to scroll up so far for now.
+		#this.phoneNumberNotes=""
+		# cell, work, home, etc.
+		#this.phoneNumberType=""
+		this.phoneNumberNotes+=str
+	# input managed by the phoneNumberManager
+	def addPhoneNumberType(this, typeIn):
+		this.phoneNumberType=typeIn
