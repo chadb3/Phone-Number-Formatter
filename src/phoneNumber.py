@@ -266,7 +266,11 @@ class Phone_Number:
 		#this.phoneNumberNotes=""
 		# cell, work, home, etc.
 		#this.phoneNumberType=""
-		this.phoneNumberNotes+=str
+		this.phoneNumberNotes+=appNote
 	# input managed by the phoneNumberManager
 	def addPhoneNumberType(this, typeIn):
 		this.phoneNumberType=typeIn
+	def printNotes(this):
+		print(this.phoneNumberNotes)
+	def printType(this):
+		print(this.phoneNumberType)

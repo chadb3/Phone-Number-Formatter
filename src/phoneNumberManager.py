@@ -24,10 +24,15 @@ class phoneNumberManager():
     def genRanPhoneFromPlace(this, place):
         print("generating phone number from place: place")
         print("WIP")
-    def addNoteToCurrentCall(this, note):
+    # appends "notes" to current (numCalls-1)
+    def addNoteToCurrentPN(this, note):
         noteToAppend=str(note)
-
-    def setPhoneTypeToCurrentCall(this):
+        if(len(this._PN_LIST)>0):
+            this._PN_LIST[len(this._PN_LIST)-1].addNotes(noteToAppend)
+        else:
+            print("No Phone Numbers")
+    # sets the phone type for the current phone number
+    def setPhoneTypeToCurrentPN(this):
         if(len(this._PN_LIST)>0):
             type=input("Cell, Work, Home, or Other: ")
             type=type.upper()
@@ -38,3 +43,6 @@ class phoneNumberManager():
                 print("Type not in list.")
         else:
             print("No Phone Numbers")
+    def printTypes(this):
+        for pn in this._PN_LIST:
+            pn.printType()
