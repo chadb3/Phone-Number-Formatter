@@ -28,7 +28,7 @@ class phoneNumberManager():
     def addNoteToCurrentPN(this, note):
         noteToAppend=str(note)
         if(len(this._PN_LIST)>0):
-            this._PN_LIST[len(this._PN_LIST)-1].addNotes(noteToAppend+"\n")
+            this._PN_LIST[len(this._PN_LIST)-1].addNotes(noteToAppend)
         else:
             print("No Phone Numbers")
     # sets the phone type for the current phone number

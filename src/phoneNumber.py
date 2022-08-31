@@ -102,7 +102,7 @@ class Phone_Number:
 		# used for noting things like if you need to ask for someone.
 		# (like if it is a main line for a business)
 		# use of extensions
-		this.phoneNumberNotes=""
+		this.phoneNumberNotes=[]
 		# cell, work, home, etc.
 		this.phoneNumberType=""
 	def printPhoneNumber(this):
@@ -266,11 +266,13 @@ class Phone_Number:
 		#this.phoneNumberNotes=""
 		# cell, work, home, etc.
 		#this.phoneNumberType=""
-		this.phoneNumberNotes+=appNote
+		this.phoneNumberNotes.append(appNote)
 	# input managed by the phoneNumberManager
 	def addPhoneNumberType(this, typeIn):
 		this.phoneNumberType=typeIn
 	def printNotes(this):
-		print(this.phoneNumberNotes)
+		for note in this.phoneNumberNotes:
+			print(note)
+		#print(this.phoneNumberNotes)
 	def printType(this):
 		print(this.phoneNumberType)
