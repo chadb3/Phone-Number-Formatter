@@ -1,4 +1,5 @@
-from src import *
+#from src import *
+from src.phoneNumber import *
 def main():
 	hasExtension=False
 	phone_number=Phone_Number(input("\nEnter Phone Number: "))
