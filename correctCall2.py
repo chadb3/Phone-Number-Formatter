@@ -1,4 +1,4 @@
-from src import *
+from src.phoneNumberManager import phoneNumberManager
 def main():
     a=phoneNumberManager()
     usrInput=""
