@@ -1,5 +1,5 @@
 # phone number object
-from src.phoneNumber import *
+from src.phoneNumber import Phone_Number
 # phone number manager is usable in other functions more easily.
 class phoneNumberManager():
     # constructor
@@ -8,7 +8,8 @@ class phoneNumberManager():
     # creates a new phone number, and adds it to the list
     def newPhoneNumber(this, pn_in):
         pn=Phone_Number(pn_in)
-        this._PN_LIST.append(pn)
+        if(pn.isPhoneNumber):
+            this._PN_LIST.append(pn)
     # generates random phone number and adds it to the list
     def newRandomPhoneNumber(this):
         pn=Phone_Number()
@@ -49,3 +50,4 @@ class phoneNumberManager():
     def printNotes(this):
         for pn in this._PN_LIST:
             pn.printNotes()
+    #def checkIfPhoneNumber(this,input):
