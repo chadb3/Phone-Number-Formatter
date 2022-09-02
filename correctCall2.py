@@ -1,3 +1,4 @@
+from collections import UserString
 from src.phoneNumberManager import phoneNumberManager
 def main():
     a=phoneNumberManager()
@@ -6,3 +7,9 @@ def main():
     while(loopVal):
         usrInput=input("> ")
         a.newPhoneNumber(usrInput)
+        if(usrInput.upper()=="EXIT"):
+            break
+        a.printList()
+
+if __name__ == "__main__":
+	main()
