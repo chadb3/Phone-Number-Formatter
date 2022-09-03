@@ -109,33 +109,23 @@ class Phone_Number:
 		print("")
 		#dash = ""
 		if(this.isPhoneNumber):
-			#for i in range(0,len(this.phone_number_as_entered)+len(" Phone Number AS ENTERED: {}")+2):
-				#dash+="-"
-				#print("-",end='')
-			#print("---- i: {}".format(i))
 			if( len(this.phoneExtension)==0):
 				#print("\n")
 				this._printInDashes("Phone Number as entered: "+this.phone_number_as_entered)
 				print("\n\n  Phone Number: {}\n\n  Human Readable: {}\n\n  Outgoing Format: {}".format(this.paste_friendly,this.human_readable,this.outgoingFormat))
 				this.checkAreaCode()
-				#print("{}\n|| Phone Number AS ENTERED: {}||\n{}\n\n  Phone Number: {}\n\n  Human Readable: {}\n\n  Outgoing Format: {}\n\n".format(dash,this.phone_number_as_entered,dash,this.paste_friendly,this.human_readable,this.outgoingFormat))
 			elif(len(this.phoneExtension)>0):
 				print("  Phone Number with Extension !")
 				this._printInDashes("Phone Number As Entered: "+this.phone_number_as_entered)
-				#print("\n{}\n|| Phone Number As Entered: {} ||\n{}".format(dash,this.phone_number_as_entered,dash))
 				print("\n\n  Phone Number: {} \n  Extension: {}".format(this.paste_friendly,this.phoneExtension[5:]))
 				print("\n  Human Readable: {} {}".format(this.human_readable,this.phoneExtension))
 				print("\n  Outgoing Format: {} ---- {}".format(this.outgoingFormat,this.phoneExtension))
 				this.checkAreaCode()
 		else:
 			NAPN="- NOT A PHONE NUMBER -"
-			#for i in range(0,len(NAPN)):
-				#dash+="-"
 			this._printInDashes(NAPN)
 			this._printInDashes(this.phone_number_as_entered)
 			this._printInDashes(NAPN)
-			#print("{}\n{}\n{}\n\t".format(dash,NAPN,dash))
-		#print("\n") was adding 2 spaces... I only wanted one
 		print("")
 		return 0
 	def getPhoneNumber(this):
@@ -172,8 +162,6 @@ class Phone_Number:
 	# Generates a phone number in the fictional range.
 	# note: this follows everyone following the North American plan, and has places in Canada and other Territories. 
 	def createFictionalPhoneNumber(this):
-		#print("asdf")
-		#print("area code")
 		areaCodeList = list(this._testAreaCodeList.keys())
 		MAX=len(areaCodeList)-1
 		index=randint(0,MAX)
@@ -273,6 +261,5 @@ class Phone_Number:
 	def printNotes(this):
 		for note in this.phoneNumberNotes:
 			print(note)
-		#print(this.phoneNumberNotes)
 	def printType(this):
 		print(this.phoneNumberType)
