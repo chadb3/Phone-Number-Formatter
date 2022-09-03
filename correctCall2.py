@@ -6,14 +6,17 @@ def main():
     loopVal=True
     while(loopVal):
         usrInput=input("> ")
-        if(usrInput.upper()=="EXIT"):
+        usrInput=usrInput.upper()
+        if(usrInput=="EXIT"):
             break
-        elif(usrInput.upper()=="PRINT"):
+        elif(usrInput=="PRINT"):
             a.printList()
-        elif(usrInput.upper()=="RANDOM"):
+        elif(usrInput=="RANDOM"):
             a.newRandomPhoneNumber()
-        elif(usrInput.upper()=="PRINT 2"):
+        elif(usrInput=="PRINT 2"):
             a.detailedPrint()
+        elif(usrInput=="HELP" or usrInput=="COMMAND" or usrInput=="COMMANDS"):
+            print("EXIT\nRANDOM\nPRINT 2\nHELP")
         else:
             a.newPhoneNumber(usrInput)
 
