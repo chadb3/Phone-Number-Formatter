@@ -263,3 +263,27 @@ class Phone_Number:
 			print(note)
 	def printType(this):
 		print(this.phoneNumberType)
+	def simplePrint(this):
+		# still need to edit this down in the extension section once I added to v2
+		#print("P")
+		#dash = ""
+		if(this.isPhoneNumber):
+			if( len(this.phoneExtension)==0):
+				#print("\n")
+				#this._printInDashes("Phone Number as entered: "+this.phone_number_as_entered)
+				print("\n  Phone Number: {}\n  Number W Dashes: {}\n  Outgoing Format: {}".format(this.paste_friendly,this.human_readable,this.outgoingFormat))
+				this.checkAreaCode()
+			elif(len(this.phoneExtension)>0):
+				print("  Phone Number with Extension !")
+				#this._printInDashes("Phone Number As Entered: "+this.phone_number_as_entered)
+				print("\n\n  Phone Number: {} \n  Extension: {}".format(this.paste_friendly,this.phoneExtension[5:]))
+				print("\n  Human Readable: {} {}".format(this.human_readable,this.phoneExtension))
+				print("\n  Outgoing Format: {} ---- {}".format(this.outgoingFormat,this.phoneExtension))
+				this.checkAreaCode()
+		else:
+			NAPN="- NOT A PHONE NUMBER -"
+			this._printInDashes(NAPN)
+			this._printInDashes(this.phone_number_as_entered)
+			this._printInDashes(NAPN)
+		#print("")
+		return 0

@@ -1,4 +1,5 @@
 # phone number object
+#import importlib pep320ex omniproc
 from src.phoneNumber import Phone_Number
 # phone number manager is usable in other functions more easily.
 class phoneNumberManager():
@@ -51,3 +52,6 @@ class phoneNumberManager():
         for pn in this._PN_LIST:
             pn.printNotes()
     #def checkIfPhoneNumber(this,input):
+    def printSimple(this):
+        for i in this._PN_LIST:
+            i.simplePrint()
