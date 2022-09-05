@@ -7,7 +7,7 @@ def main():
     while(loopVal):
         usrInput=input("> ")
         usrInput=usrInput.upper()
-        if(usrInput=="EXIT" or usrInpt=="EXIT()"):
+        if(usrInput=="EXIT" or usrInput=="EXIT()"):
             break
         elif(usrInput=="PRINT"):
             a.printList()
@@ -15,8 +15,12 @@ def main():
             a.newRandomPhoneNumber()
         elif(usrInput=="PRINT 2"):
             a.printSimple()
+        elif(usrInput=="PRINT 3"):
+            a.printPnWithCount()
+            num=input("Enter Number to Print: ")
+            a.printSimpleIndex(num)
         elif(usrInput=="HELP" or usrInput=="COMMAND" or usrInput=="COMMANDS"):
-            print("EXIT\nRANDOM\nPRINT 2\nHELP")
+            print("EXIT\nRANDOM\nPRINT 2\nPRINT 3\nHELP")
         else:
             a.newPhoneNumber(usrInput)
 

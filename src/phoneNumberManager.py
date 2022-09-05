@@ -1,5 +1,7 @@
 # phone number object
 #import importlib pep320ex omniproc
+#import importlib
+#PNF=importlib.import_module("Phone-Number-Formatter")
 from src.phoneNumber import Phone_Number
 # phone number manager is usable in other functions more easily.
 class phoneNumberManager():
@@ -55,3 +57,22 @@ class phoneNumberManager():
     def printSimple(this):
         for i in this._PN_LIST:
             i.simplePrint()
+    def printPnWithCount(this):
+        index=1
+        for i in this._PN_LIST:
+            print("{}: {}".format(index,i))
+            index+=1
+    def printSimpleIndex(this, number):
+        try:
+            index=int(number)-1
+            if(index<0):
+                print("Index less than 0")
+                return 0
+        except:
+            print("Input Not a Number")
+            return 0
+        try:
+            print("Debug index: {}".format(index))
+            this._PN_LIST[index].simplePrint()
+        except:
+            print("INDEX out of range")
