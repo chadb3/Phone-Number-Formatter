@@ -232,22 +232,35 @@ class Phone_Number:
 		else:
 			print("  Not Same State")
 	def genPhoneNumberFromSpecificPlace(this, place):
-		print("Generating phone number from: {} (WIP)".format(place))
+		#print("Generating phone number from: {} (WIP)".format(place))
 		listOfAreaCodes=[]
 		for i in this._testAreaCodeList:
 			if(this._testAreaCodeList[i]==place):
 				listOfAreaCodes.append(i)
-				print(listOfAreaCodes)
+				#print(listOfAreaCodes)
+		index=randint(0,len(listOfAreaCodes)-1)
+		#print("index: {}".format(index))
+		return Phone_Number(str(listOfAreaCodes[index])+this.genRandV2(3)+this.genRandV2(4))
 	#instead of the above with 2 separate functions
 	# now you will pass the number of digits to generate
 	def genRandV2(this, numDigits):
-		print("V2 version of gen random.")
+		#print("V2 version of gen random.") #gets called based off number of times it is called
 		retNumber=0
-		aMax=""
+		retString=""
+		randIntArray=[]
 		for i in range(0,numDigits):
-			aMax+="9"
-		retNumber=randint(1,int(aMax))
-		print(retNumber)
+			randIntArray.append(randint(0,9))
+		#aMax=""
+		#for i in range(0,numDigits):
+			#aMax+="9"
+		#retNumber=randint(1,int(aMax))
+		#print(retNumber)
+		#print(randIntArray)
+		for i in range(0,numDigits):
+			retString+=str(randIntArray[i])
+		#print(retString)
+		return retString
+
 	def addNotes(this, note):
 		appNote=str(note)
 		#noting here so I don't have to scroll up so far for now.
