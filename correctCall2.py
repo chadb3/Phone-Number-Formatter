@@ -19,8 +19,11 @@ def main():
             a.printPnWithCount()
             num=input("Enter Number to Print: ")
             a.printSimpleIndex(num)
+        elif(usrInput=="RANDOM 2"):
+            place=input("Input state abbreviation: ").upper()
+            a.genRanPhoneFromPlace(place)
         elif(usrInput=="HELP" or usrInput=="COMMAND" or usrInput=="COMMANDS"):
-            print("EXIT\nRANDOM\nPRINT 2\nPRINT 3\nHELP")
+            print("EXIT\nRANDOM\nRANDOM 2\nPRINT 2\nPRINT 3\nHELP")
         else:
             a.newPhoneNumber(usrInput)
 
