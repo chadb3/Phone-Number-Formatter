@@ -238,6 +238,8 @@ class Phone_Number:
 			if(this._testAreaCodeList[i]==place):
 				listOfAreaCodes.append(i)
 				#print(listOfAreaCodes)
+		if(len(listOfAreaCodes)==0):
+			return Phone_Number()
 		index=randint(0,len(listOfAreaCodes)-1)
 		#print("index: {}".format(index))
 		return Phone_Number(str(listOfAreaCodes[index])+this.genRandV2(3)+this.genRandV2(4))

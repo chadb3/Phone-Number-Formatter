@@ -26,10 +26,19 @@ class phoneNumberManager():
         for pn in this._PN_LIST:
             pn.printPhoneNumber()
     def genRanPhoneFromPlace(this, place):
-        print("generating phone number from place: place")
+        #print("generating phone number from place: place")
         pn=Phone_Number()
-        this._PN_LIST.append(pn.genPhoneNumberFromSpecificPlace(place))
-        print("WIP")
+        pn=pn.genPhoneNumberFromSpecificPlace(place)
+        #print(pn.genPhoneNumberFromSpecificPlace(place))
+        #print(an)
+        #print("HIT")
+        if(str(pn)==str(Phone_Number())):
+            print("Not a valid location")
+        else:
+            print("{} created and added to list".format(pn))
+            this._PN_LIST.append(pn)
+        #this._PN_LIST.append(pn.genPhoneNumberFromSpecificPlace(place))
+        #print("WIP")
     # appends "notes" to current (numCalls-1)
     def addNoteToCurrentPN(this, note):
         noteToAppend=str(note)
