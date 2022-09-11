@@ -2,6 +2,7 @@
 #import importlib pep320ex omniproc
 #import importlib
 #PNF=importlib.import_module("Phone-Number-Formatter")
+from pickle import NONE
 from src.phoneNumber import Phone_Number
 # phone number manager is usable in other functions more easily.
 class phoneNumberManager():
@@ -87,3 +88,14 @@ class phoneNumberManager():
             this._PN_LIST[index].simplePrint()
         except:
             print("INDEX out of range")
+    def removePhoneNumber(this):
+        # print phone numbers
+        # ask what number to remove.
+        # remove from list
+        print("Enter Number To Remove: ")
+        num=1
+        for pn in this._PN_LIST:
+            print("{}: {}".format(num,pn))
+            num+=1
+        num_to_remove=input("Enter Number: ")
+        print("{} REMOVED!".format(num_to_remove))
