@@ -2,7 +2,7 @@
 #import importlib pep320ex omniproc
 #import importlib
 #PNF=importlib.import_module("Phone-Number-Formatter")
-from pickle import NONE
+#from pickle import NONE
 from src.phoneNumber import Phone_Number
 # phone number manager is usable in other functions more easily.
 class phoneNumberManager():

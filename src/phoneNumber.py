@@ -57,7 +57,7 @@ class Phone_Number:
 		phoneSegments = this._getSplitDigits(phoneNumOnlyDigits)
 		humanReadable = this._getHumanReadable(phoneSegments)
 		copyPaste = this._getCtrlcCtrlv(phoneSegments)
-		outgoingFormat = "1"+copyPaste
+		outgoingFormat = "+1"+copyPaste
 		# return Array of Phone Number Segments for the Constructor
 		retArr.append(translatedPhone)
 		retArr.append(copyPaste)
