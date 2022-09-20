@@ -25,13 +25,28 @@ class PhoneNumberDB:
         None
     def SELECT_PHONE_NUMBER(this,ID_IN):
         None
-    def SELECT_AREA_CODE(this,ITEM_IN):
+    def SELECT_STATE_FROM_USA_AREA_CODE(this,ITEM_IN):
+        retVal=None
+        con=sqlite3.connect(this.DATABASEFILE)
+        sqlCursor=con.execute("SELECT STATE from USA_AREA_CODES where AREA_CODE='{}'".format(ITEM_IN))
+        try:
+            #debug
+            #print("SELECT STATE FROM AREA CODE HIT")
+            retVal=sqlCursor.fetchone()
+            #debug
+            #print(retVal)
+            return retVal[0]
+        except Exception as ex:
+            print("Issue in SELECT_STATE_FROM_USA_AREA_CODE")
+            print(ex)
+            return retVal
         None
     def SELECT_ALL_AREA_CODES_AND_STATE_ABBR(this):
         con=sqlite3.connect(this.DATABASEFILE)#+this.MODE,this._URI) look into why this doesn't work, or if it is even needed at all...
         sqlCursor=con.execute("SELECT * FROM USA_AREA_CODES")
         try:
             retList=sqlCursor.fetchall()
+            con.close()
             return retList
         except Exception as ex:
             print(ex)

@@ -81,8 +81,8 @@ class Phone_Number:
 			retVal[item[0]]=(item[1])
 			#retVal.append("{}:{}".format(item[0],item[1]))
 			#print("Debug:{}:\'{}\'".format(item[0],item[1]))
-		print("EXIT")
-		print(retVal)
+		#print("EXIT")
+		#print(retVal)
 		return retVal
 		
 	def __init__(this,phoneNumberIn="1 000-000-0000"):
@@ -176,6 +176,18 @@ class Phone_Number:
 			print("  Not found or added to list yet")
 		print("")
 		return state
+	# checkAreaCode but uses db rather than a dictionary. 
+	def checkAreaCode2(this):
+		state=""
+		try:
+			state=this.Phone_Database.SELECT_STATE_FROM_USA_AREA_CODE(this.area_code)
+			if(state!=None):
+				print("STATE: {}".format(state))
+			else:
+				print("State/location not in database")
+		except:
+			print("issue with database in checkAreaCode")
+		None
 	# Generates a phone number in the fictional range.
 	# note: this follows everyone following the North American plan, and has places in Canada and other Territories. 
 	def createFictionalPhoneNumber(this):
