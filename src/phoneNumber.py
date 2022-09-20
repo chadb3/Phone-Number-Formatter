@@ -155,7 +155,7 @@ class Phone_Number:
 # starting work on this
 # should print the state the area code is part of
 # working on getting a list of area codes and their associated states.
-	def checkAreaCode(this):
+	def checkAreaCode2(this):
 		#this._printInDashes("Checking Area Code:")
 		# see source in data file.
 		# looking at creating that list programmatically or creating and using a DB
@@ -177,7 +177,7 @@ class Phone_Number:
 		print("")
 		return state
 	# checkAreaCode but uses db rather than a dictionary. 
-	def checkAreaCode2(this):
+	def checkAreaCode(this):
 		state=""
 		try:
 			state=this.Phone_Database.SELECT_STATE_FROM_USA_AREA_CODE(this.area_code)
