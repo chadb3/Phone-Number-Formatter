@@ -21,7 +21,7 @@ class PhoneNumberDB:
         this.MODE="?mode=rw"
         this._URI=True
         #this.sql_connection=sqlite3.connect(this.DATABASEFILE+this.MODE,this._URI)
-    def SELECT_STATE(this, ITEM_IN):
+    def SELECT_STATE_FROM_US_STATES_WHERE_STATE_ABBR_IS(this, ITEM_IN):
         None
     def SELECT_PHONE_NUMBER(this,ID_IN):
         None

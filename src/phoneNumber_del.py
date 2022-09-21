@@ -179,10 +179,11 @@ class Phone_Number:
 	# checkAreaCode but uses db rather than a dictionary. 
 	def checkAreaCode(this):
 		state=""
+		full_state=""
 		try:
 			state=this.Phone_Database.SELECT_STATE_FROM_USA_AREA_CODE(this.area_code)
 			if(state!=None):
-				print("STATE: {}".format(state))
+				print("  STATE: {}".format(state))
 			else:
 				print("State/location not in database")
 		except:
